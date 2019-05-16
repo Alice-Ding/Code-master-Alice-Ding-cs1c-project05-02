@@ -22,6 +22,8 @@ public class SongEntry implements Comparable<SongEntry>
     private String artist;
     private String genre;
 
+    private int count;
+    
     // default constructor
     protected SongEntry(String title, int duration, String artist_name, String genre)
     {
@@ -114,4 +116,30 @@ public class SongEntry implements Comparable<SongEntry>
                 + artist + ", "
                 + genre;
     }
+    
+    /**
+     * Increase the count by 1 each call.
+     */
+    public void incrementCount()
+    {	count++;	};
+
+    /**
+     * Reduce the count by 1 each call and return false when count is less than 1.
+     * @return Whether the count of the item was successfully decreased by 1.
+     */
+    public boolean decrementCount()
+    {
+        if (count < 1)
+            return false;
+
+        count--;
+        return true;
+    };
+
+    /**
+     * Get current number of items
+     * @return	int value of current number of items.
+     */
+    public int getCount()
+    {	return count;	}
 }
