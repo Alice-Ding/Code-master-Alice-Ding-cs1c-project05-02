@@ -1,0 +1,10 @@
+add milk
+add soup
+add apples
+add tomato
+add avocado
+buy avocado
+buy apples
+buy milk
+buy soup
+buy tomato
